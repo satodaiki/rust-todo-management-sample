@@ -1,0 +1,17 @@
+<a href="/create_todo">TODOを作成</a>
+<table>
+    <thead>
+        <tr>
+            <th scope="col">description</th>
+            <th scope="col">deadline at</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos %}
+        <tr id="{{ todo.id }}">
+            <td>{{ todo.description }}</td>
+            <td>{{ todo.deadline_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
